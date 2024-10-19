@@ -1,0 +1,77 @@
+Copyright Popa Victor-Andrei 313CAb 2023-2024
+
+
+In functia main am initializat vectorul de matrici cu NULL
+deoarece acesta nu contine nicio matrice momentan,vm ca
+vector care memoreaza dimensiunea liniilor,vn pt coloane,s
+pentru suma elementelor fiecarei matrici.Apoi am luat ca
+variabile ajutatoare litera,care ma ajuta sa stiu daca am
+citit o litera corespunzatoare programului sau nu,index pt
+indexul unei matrici.Am declarat cu l literele citite si cu
+c enterul.Folosesc functia do while care imi executa operatii
+asupra vectorului cat timp citesc litere diferite de Q.Daca se
+citeste macar o litera valida,inclusiv Q,atunci litera
+devine 1,in caz contrar afisam Unrecognized command.
+
+Cand citim L,realoc vectorul de matrici A,marindu-i dimensiunea cu 1 si apoi
+ma folosesc de functia load care incarca o noua matrice in vector si modifica
+valoarea vectorilor vm si vn cu dimensiunile ei si calculeaza suma elementelor
+pe care o punem in s.La finalul functiei,marim k cu 1,reprezentand numarul de
+matrici din vector.
+
+Daca se citeste D,atunci verificam daca matricea corespunzatoare indexului
+citit exista si afisam dimensiunile ei,iar in caz contrar spunem ca nu exista
+o matrice cu acel index.
+
+Daca se citeste P,atunci verificam daca matricea corespunzatoare indexului
+citit exista si afisam matricea,iar in caz contrar spunem ca nu exista
+o matrice cu acel index.
+
+Daca citim T,verificam daca exista matricea respectiva indexului.Daca nu exista
+atunci spunem acest lucru,iar daca exista atunci folosim functia transpusa care
+se foloseste de o auxiliara pt a calcula transpusa matricei dorite,apoi
+elibereaza memoria matricei si ia ca valoarea auxiliara,urmand astfel sa
+inversam si indicii de dimensiune originali.
+
+Daca se citeste M,presupun ca se poate face inmultirea dintre 2 matrici
+Daca matricea corespunzatoare lui index1 sau index2 nu exista,atunci spun acest
+lucru si ok devine 0,caz in care nu mai verific nimic.Daca ok este inca 1,
+atunci verific daca se poate face inmultirea dintre matrici si in caz contrar
+spun ca nu se poate si ok devine 0 .Daca ok a ramas tot 1,inseamna ca
+inmultirea poate avea loc,astfel maresc dimensiunea vectorului de matrici
+asa cum ni se cere si ma folosec de functia inmultire care inmulteste cele
+doua matrici si care calculeaza suma elementelor matricei rezultate.
+Matricea rezultata este incarcata in vector pe noua pozitie,iar vm si vn retin
+dimensiunile acesteia urmand astfel sa marim si pe k care retine nr de matrici
+
+Cand se citeste O, apelez functia sortare care imi aranjeaza matricele din
+vector in asa fel incat sa fie ordonate crescator dupa suma elementelor,
+schimband astfel si dimensiunile si suma elementelor din vector corespunzator.
+
+Cand citesc F, verific daca matricea care se doreste a fi eliberata exista si
+in caz contrar spun ca nu exista.Apoi, eliberez memoria matricei dorite si mut
+toate celelalte matrici care urmau dupa ea cu o pozitie la stanga,urmand astfel
+sa realoc vectorul de matrici,micsorandu-i dimensiunea si scazand k cu 1.
+De asemenea,mut si valorile vectorilor vm,vn si s cu o unitate la stanga.
+Daca se citeste C,verific daca exista matricea si apoi ma folosesc de functia
+redimensionare pentru a modifica matricea asa cum se cere.Din matricea
+originala,extrag intersectia liniilor si coloanelor citite intr o matrice
+auxiliara pentru a elibera apoi memoria initiala a matricei,urmand astfel
+ca aceasta sa ia valoarea auxiliarei.In plus,modific vm,vn si calculez iar suma
+corespunzator matricei noi.
+
+Daca se citeste R,atunci utilizez functia ridicare care imi verifica pe rand
+daca exista matricea dorita,daca puterea este pozitiva si apoi daca matricea
+este patratica.Daca respecta toate cerintele atunci ma folosesc de 2 variabile
+aux si rez dar si de functia multiply care intoarce rezultatul inmultirii a
+doua matrici.Dau lui rez valoarea matricei identice si cat timp puterea este
+mai mare decat 0,atunci daca puterea este impara inmultesc rez cu valoarea
+matricei.Apoi ridic matricea a la patrat si impart pe p la 2,asigurand astfel
+ridicarea la o putere in timp logaritmic.Ma folosesc de matricea aux pentru a
+jongla cu valoarea lui rez si aux pentru a elibera pe rand memoria de care nu
+mai am nevoie,asigurandu-ma astfel ca nu am memory leak.Cand p devine 0,
+eliberez memoria matricei si ii dau valoarea lui rez,urmand ca apoi sa calculez
+din nou suma elementlor noii matrici.
+
+Daca citesc Q,atunci ma opresc si eliberez toata memoria vectorului de matrici
+acolo unde este cazul.
